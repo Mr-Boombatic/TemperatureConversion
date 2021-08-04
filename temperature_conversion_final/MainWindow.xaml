@@ -1,0 +1,26 @@
+﻿<Window x:Class="temperature_conversion_final.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:temperature_conversion_final"
+        mc:Ignorable="d"
+        Title="Преобразователь температур" Height="180" Width="360">
+    <Grid FocusManager.FocusedElement="{Binding ElementName=Fahrenheit}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="Celsius" Grid.Column="1" Margin="10,10,10,10" TextWrapping="Wrap" Grid.Row="1" FontSize="20" TextChanged="TextChanged"/>
+        <TextBox x:Name="Kelvin" Grid.Column="1" Margin="10,10,10,10" TextWrapping="Wrap" Grid.Row="2" FontSize="20" TextChanged="TextChanged"/>
+        <TextBox x:Name="Fahrenheit" Grid.Column="1" Margin="10,10,10,10" TextWrapping="Wrap" Grid.Row="0" FontSize="20" TextChanged="TextChanged"/>
+        <TextBlock Margin="10,10,10,10" TextAlignment="Right" Text="Градусы Кельвина:" Grid.Row="2" FontSize="13"/>
+        <TextBlock Margin="10,10,10,10" TextAlignment="Right" Text="Градусы Фаренгейта:" Grid.Row="0" FontSize="13"/>
+        <TextBlock Margin="10,10,10,10" TextAlignment="Right" Text="Градусы Цельсия:" Grid.Row="1" FontSize="13"/>
+    </Grid>
+</Window>
